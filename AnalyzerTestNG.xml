@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RetryFailedTC">
+<listeners>
+<listener class-name="AnalyzerTest.MyTransformer">
+</listener>
+</listeners>
+<test name="RetryMultipleFailedTestCases">
+	<classes>
+		<class name="AnalyzerTest.TestCase1">
+		</class>
+	</classes>
+
+</test>
+
+</suite>

@@ -1,0 +1,9 @@
+web site - https://login.wordpress.org/register/create-profile
+
+single attribute - //input[@id='user_location']
+multiple attribute - //input[@type='text'][@id='user_location']
+and operator - //input[@type='text' and @id='user_location']
+or operator - //input[@type='text' or @id='user_location']
+contains - //input[contains(@type,"text")][@id="user_url"]    {it search for partial contains}
+contains and text - //a[contains(text(),'Incorrect email? Update email address.')]
+ 
