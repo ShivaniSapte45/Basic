@@ -30,5 +30,17 @@ public class ReverseString {
 	 
 	        // print reversed String
 	        System.out.println(input1);
+	        
+	        
+	        String o = "Test 123", r=" ";
+	    	char c;
+	    	for(int i=0; i<o.length(); i++)
+	    	{
+	    		c=o.charAt(i);
+	    		r=c+r;
+	    	}
+	    	System.out.println(r);
 }
+	
+	
 }

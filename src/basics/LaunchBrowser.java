@@ -1,6 +1,8 @@
 package basics;
 
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,8 +39,24 @@ public class LaunchBrowser {
 	        
 	        Thread.sleep(2000);
 	       WebElement drorpdown_select = driver.findElement(By.xpath("//select[@class = 'product_sort_container']"));
-	        Select dropdown = new Select(drorpdown_select);
-	        dropdown.selectByValue("lohi");
+	       
+	       Select dropdown = new Select(drorpdown_select);
+	       System.out.println(dropdown.getFirstSelectedOption().getText());
+
+	       dropdown.selectByValue("lohi");
+	        Thread.sleep(2000);
+	        System.out.println(dropdown.getFirstSelectedOption().getText());
+	        
+	        List <WebElement>list = dropdown.getOptions();
+	        for(WebElement options:list)
+	        {
+	        	System.out.println(options.getText());
+	        	if(options.getText().equalsIgnoreCase("Name (A to Z)"))
+	        	{
+	        		dropdown.selectByVisibleText("Name (A to Z)");
+	        		break;
+	        	}
+	        }
 	        
 	        Thread.sleep(2000);
 	        
